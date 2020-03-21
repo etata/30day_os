@@ -10,5 +10,7 @@
 
 0000：1400三处输入几个16进制的，
 
-然后一点"!cons_nt.bat"进入cmd，输入run就ok了。
+然后一点"!cons_nt.bat"进入cmd，输入run就ok了。(可以直接双击run.bat)
+
+第二个版本是hellos1中，文件类型是nas结尾。我在编辑器中的用的asm。然后又复制成nas的。直接双击run.bat看效果。
 

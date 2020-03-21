@@ -1,0 +1,14 @@
+距离上次已经好几天了。
+今天主要是学习汇编语言。
+mov是赋值。
+
+各个寄存器的常规用法。
+ax accumulator 累加器
+cx counter 计数器
+dx  data 数据
+bx  base 基址 
+
+sp   stack pointer 栈指针
+bp   base pointer 基址指针
+si   source index 源变址
+di    destination index 目的变址
