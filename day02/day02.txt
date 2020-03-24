@@ -12,3 +12,33 @@ sp   stack pointer 栈指针
 bp   base pointer 基址指针
 si   source index 源变址
 di    destination index 目的变址
+
+
+HLT ; halt  停止
+
+用c语言改写的节选
+
+entry:
+	ax = 0;
+	ss = ax;
+	sp = 0x7c00;
+	ds = ax;
+	es = ax;
+	si = msg;
+puloop:
+	al = byte [si];
+	si = si + 1;
+	if(al == 0) {goto fin;}
+	ah = ox0e;
+	bx = 15;
+	int 0x10;
+	goto putloop;
+fin: 
+	hlt;
+	goto fin;
+
+
+makefile
+#注释
+ipl.bin : ipl.nas makefile   #想要生成ipl。bin，先检查一下ipl。nas和makefile是否准备好了，然后执行下面的语句。
+	../z_tools/nask.exe ipl.nas ipl.bin ipl.lst
